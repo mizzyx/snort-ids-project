@@ -1,19 +1,62 @@
-# Screenshots
+# Snort IDS Project
 
-## Traffic Generation - Kali
+## Overview
 
-Network traffic was intentionally generated from Kali Linux for testing purposes.
+This project demonstrates a basic Intrusion Detection System (IDS) using Snort.
 
-The tests included:
-- ICMP ping
+Kali Linux was used to generate controlled network traffic, while Ubuntu Linux was used to monitor and analyze the traffic using Snort.
+
+## Lab Environment
+
+- Traffic Generator: Kali Linux
+- IDS / Monitoring System: Ubuntu Linux
+- IDS Software: Snort
+- Network Interface: enp0s3
+
+## Network Testing
+
+Controlled network traffic was generated from Kali Linux for testing:
+
+- ICMP ping traffic
+- Nmap scanning traffic
+- Hping-generated traffic
+
+The traffic was sent toward the Ubuntu monitoring system.
+
+## Snort Detection
+
+Snort was configured with custom detection rules stored in:
+
+`rules/local.rules`
+
+The generated traffic was monitored on Ubuntu and Snort was used to detect suspicious network activity and generate alerts.
+
+## Evidence
+
+Screenshots of the testing process are available in the [`screenshots`](screenshots/) directory.
+
+### Traffic Generation
+
+Kali Linux screenshots document:
+
+- ICMP ping testing
 - Nmap scanning
-- hping-generated traffic
+- Hping-generated traffic
 
-## Traffic Observation - Ubuntu
+### Traffic Detection
 
-The generated traffic was monitored and analyzed on Ubuntu using Snort IDS.
+Ubuntu screenshots document Snort monitoring and detecting the generated traffic.
 
-The screenshots show Snort detecting the test traffic and generating alerts.
+## Project Structure
 
-![Snort alerts on Ubuntu](snort-ubuntu-alerts.png)
-
+```text
+snort-ids-project/
+├── rules/
+│   └── local.rules
+├── screenshots/
+│   ├── README.md
+│   ├── ping.png
+│   ├── nmap.png
+│   ├── hping.png
+│   └── snort-ubuntu-alerts.png
+└── README.md
