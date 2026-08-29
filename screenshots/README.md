@@ -14,3 +14,6 @@ The tests included:
 The generated traffic was monitored and analyzed on Ubuntu using Snort IDS.
 
 The screenshots show Snort detecting the test traffic and generating alerts.
+
+![Snort alerts on Ubuntu](snort-ubuntu-alerts.png)
+
